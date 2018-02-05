@@ -18,13 +18,11 @@ function sumWhile(a) {
   return sum;
 }
 
-function sumRecursion(a, i) {
-  let index = i;
-  if (index === a.length - 1) {
-    return a[index];
+function sumRecursion(a) {
+  if (a.length == 0) {
+    return 0;
   }
-  index++;
-  return a[index] + sumRecursion(a[index]);
+  return a[0] + sumRecursion(a.slice(1));
 }
 
 function sumTheSimpleWay(a) {
